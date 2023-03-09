@@ -40,7 +40,7 @@ KERNEL_SRC ?= /lib/modules/$(shell uname -r)/build
 KBUILD_OPTIONS := RMNET_CORE_ROOT=$(PWD)
 KBUILD_OPTIONS += MODNAME?=rmnet_core
 
-all:
+modules:
 	$(MAKE) -C $(KERNEL_SRC) M=$(M) modules $(KBUILD_OPTIONS)
 
 modules_install:

@@ -7,19 +7,7 @@
 #define TRACE_SYSTEM rmnet
 #undef TRACE_INCLUDE_PATH
 
-#if LINUX_VERSION_CODE < KERNEL_VERSION(5,5,0)
-	#ifdef CONFIG_ARCH_SDXNIGHTJAR
-		#define TRACE_INCLUDE_PATH ../../../../../../../datarmnet/core
-	#else
-		#define TRACE_INCLUDE_PATH ../../../../../../../src/datarmnet/core
-	#endif /* CONFIG_ARCH_SDXNIGHTJAR */
-#else
-	#if defined(__arch_um__)
-		#define TRACE_INCLUDE_PATH ../../../../datarmnet/core
-	#else
-		#define TRACE_INCLUDE_PATH ../../../../vendor/qcom/opensource/datarmnet/core
-	#endif /* defined(__arch_um__) */
-#endif /* endif LINUX_VERSION_CODE < KERNEL_VERSION(5,5,0) */
+#define TRACE_INCLUDE_PATH ../../../msm-modules/datarmnet/core
 
 #define TRACE_INCLUDE_FILE rmnet_trace
 
